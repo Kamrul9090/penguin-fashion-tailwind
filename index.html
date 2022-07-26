@@ -8,6 +8,7 @@
     <title>tailwind css</title>
     <!-- tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
     <script>
         tailwind.config = {
             theme: {
@@ -26,10 +27,61 @@
 
 <body>
     <!-- header section -->
+    <div>
+        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="https://flowbite.com/" class="flex items-center">
+                    <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     <header>
         <!-- Navbar -->
 
-        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+
+
+
+        <!-- <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
             <div class="container flex flex-wrap justify-around items-center mx-auto">
                 <a href="https://flowbite.com/" class="flex items-center">
                     <img src="images/logo.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
@@ -69,7 +121,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <!-- banner section -->
         <section class="container mx-auto w-4/5">
             <div class="md:flex md:items-center">
@@ -228,8 +280,8 @@
 
         <!-- our benifit section -->
         <section class="w-4/5 container mx-auto">
-            <div class="grid grid-cols-3 gap-7">
-                <div class="bg-600 flex p-5 rounded-lg">
+            <div class="grid lg:grid-cols-2 gap-7">
+                <div class="bg-600 flex p-5 rounded-lg order-1">
                     <div class="mr-2">
                         <img class="w-20 h-20" src="images/house.png" alt="">
                     </div>
@@ -239,10 +291,10 @@
                             with peace of mind.</p>
                     </div>
                 </div>
-                <div class="col-span-2 row-span-3 rounded">
+                <div class="row-span-3 rounded -order-2">
                     <img src="images/shopping.png" alt="">
                 </div>
-                <div class="bg-600 flex p-5 rounded-lg">
+                <div class="bg-600 flex p-5 rounded-lg order-3">
                     <div class="mr-2">
                         <img class="w-20 h-20" src="images/box.png" alt="">
                     </div>
@@ -252,19 +304,21 @@
                             with peace of mind.</p>
                     </div>
                 </div>
-                <div class="bg-600 flex p-5 rounded-lg">
+                <div class="bg-600 flex p-5 rounded-lg order-4">
                     <div class="mr-2">
-                        <img class="w-20 h-20" src="images/box.png" alt="">
+                        <img class="w-20 h-20" src="images/question.png" alt="">
                     </div>
                     <div>
                         <h4 class="font-semibold text-white text-l font-serif">Contact Our Seller</h4>
-                        <p class="font-semibold">They are here to help you. That's quite
-                            literally what we pay them.</p>
+                        <p class="font-semibold">They are here to help you.That's quite
+                            <br>literally what we pay them.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
 </body>
 
 </html>
